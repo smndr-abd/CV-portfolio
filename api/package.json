@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev --listen 3001"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.8"
+  }
+}

@@ -1,0 +1,118 @@
+.services {
+  padding: 120px 60px;
+}
+
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+  gap: 40px;
+}
+
+.services-heading {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.accent-dot { color: var(--accent); }
+
+.services-sub {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--fg-dim);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.service-card {
+  background: var(--bg);
+  padding: 48px 40px;
+  position: relative;
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.service-card:hover {
+  background: var(--bg-3);
+}
+
+.service-no {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.service-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.service-desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--fg-dim);
+  margin-bottom: 24px;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-tag {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--fg-dim);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.service-card:hover .service-tag {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.service-arrow {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  font-size: 20px;
+  color: var(--border);
+  transition: all 0.3s;
+}
+
+.service-card:hover .service-arrow {
+  color: var(--accent);
+  transform: translate(4px, -4px);
+}
+
+@media (max-width: 768px) {
+  .services { padding: 80px 24px; }
+  .services-header { flex-direction: column; align-items: flex-start; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { padding: 32px 24px; }
+}

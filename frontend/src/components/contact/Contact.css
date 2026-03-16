@@ -1,0 +1,227 @@
+.contact {
+  padding: 120px 60px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-heading {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.heading-accent { color: var(--accent); }
+
+.contact-blurb {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--fg-dim);
+  margin-bottom: 40px;
+  max-width: 320px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--fg-dim);
+  transition: color 0.2s;
+}
+
+.contact-item:hover { color: var(--fg); }
+
+.item-icon {
+  font-size: 14px;
+  color: var(--accent);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 24px;
+}
+
+.social-link {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+  transition: color 0.2s;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.social-link:hover { color: var(--accent); }
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 48px;
+  border-radius: 4px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.form-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 14px 16px;
+  font-size: 14px;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+}
+
+.form-input::placeholder {
+  color: var(--fg-dim);
+  opacity: 0.5;
+}
+
+.form-textarea {
+  min-height: 140px;
+}
+
+.form-submit {
+  padding: 16px 32px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.form-submit:hover:not(:disabled) {
+  background: var(--fg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 255, 71, 0.15);
+}
+
+.form-submit.sending { opacity: 0.6; cursor: not-allowed; }
+.form-submit.success { background: #4ade80; color: var(--bg); }
+.form-submit.error { background: var(--accent-2); color: var(--fg); }
+
+.form-hint {
+  font-size: 11px;
+  color: var(--fg-dim);
+  line-height: 1.6;
+  padding: 12px 16px;
+  border: 1px dashed var(--border);
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .contact { padding: 80px 24px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-form { padding: 32px 24px; }
+}
+
+.contact-success {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 64px 48px;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.contact-success h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contact-success p {
+  font-size: 14px;
+  color: var(--fg-dim);
+  line-height: 1.7;
+}
+
+.btn-reset {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.btn-reset:hover { color: var(--accent); }
+
+.form-error {
+  font-size: 12px;
+  color: var(--accent-2);
+  padding: 10px 14px;
+  border: 1px solid var(--accent-2);
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
